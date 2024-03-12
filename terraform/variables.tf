@@ -1,16 +1,16 @@
-variable "AWS_PROFILE" {
+/*variable "AWS_PROFILE" {
   description = "AWS profile"
   default     = "sdoubleobrown"
-}
+}*/
 
-/*variable "AWS_ACCESS_KEY_ID" {
+variable "AWS_ACCESS_KEY_ID" {
   description = "AWS access key ID"
 }
 
 variable "AWS_SECRET_ACCESS_KEY" {
   description = "AWS secret access key"
 }
-*/
+
 variable "region" {
   default = "us-east-1"
 }
