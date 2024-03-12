@@ -8,7 +8,9 @@ data "aws_eks_cluster_auth" "cluster_auth" {
 
 # Configure the AWS provider
 provider "aws" {
-  profile = var.AWS_PROFILE
+  #profile = var.AWS_PROFILE
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
   region  = var.region
 }
 
