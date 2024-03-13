@@ -84,8 +84,10 @@ resource "aws_route_table" "public" {
 
 # Create private route table
 resource "aws_route_table" "private" {
+  count  = length(var.public_subnet_cidr_blocks)
   vpc_id = aws_vpc.main.id
-    route {
+   
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat_gateway.id
   }
@@ -106,5 +108,6 @@ resource "aws_route_table_association" "public" {
 resource "aws_route_table_association" "private" {
   count          = length(aws_subnet.private)
   subnet_id      = aws_subnet.private[count.index].id
-  route_table_id = aws_route_table.private.id
+  route_table_id = aws_route_table.private[count.index].id
+  # route_table_id = aws_route_table.private.id
 }
