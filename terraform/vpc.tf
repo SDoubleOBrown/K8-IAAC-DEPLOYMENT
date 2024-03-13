@@ -64,6 +64,7 @@ resource "aws_nat_gateway" "nat_gateway" {
   #count         = length(var.public_subnet_cidr_blocks)
   allocation_id = aws_eip.nat_public.id
   subnet_id     = aws_subnet.public[0].id
+  depends_on = [aws_internet_gateway.igw]
 }
 
 # Create public route table
