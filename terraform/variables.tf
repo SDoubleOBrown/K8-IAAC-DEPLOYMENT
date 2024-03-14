@@ -65,7 +65,7 @@ variable "eks_node_group_iam" {
   type    = string
   default = "eks-node-iam"
 }
-variable "eks_node_group" {
+variable "node_group_name" {
   type    = string
   default = "eks-node-group"
 }

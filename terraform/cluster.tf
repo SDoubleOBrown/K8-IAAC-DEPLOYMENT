@@ -1,3 +1,7 @@
+data "aws_eks_cluster" "k8s-acc" {
+  name = aws_eks_cluster.k8s-acc.name
+}
+
 resource "aws_eks_cluster" "k8s-acc" {
   name     = var.cluster_name
   version  = var.kubernetes_version
@@ -18,8 +22,8 @@ resource "aws_eks_cluster" "k8s-acc" {
 }
 
 resource "aws_eks_node_group" "k8s-acc" {
-  cluster_name    = var.cluster_name
-  node_group_name = var.cluster_name
+  cluster_name    = aws_eks_cluster.k8s-acc.name
+  node_group_name = var.node_group_name
   node_role_arn   = aws_iam_role.k8s-acc-node.arn
   subnet_ids      = aws_subnet.private.*.id
 
