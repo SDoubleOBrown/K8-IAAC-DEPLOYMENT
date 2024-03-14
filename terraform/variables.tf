@@ -1,8 +1,3 @@
-/*variable "AWS_PROFILE" {
-  description = "AWS profile"
-  default     = "sdoubleobrown"
-}*/
-
 variable "AWS_ACCESS_KEY_ID" {
   description = "AWS access key ID"
 }
@@ -92,18 +87,3 @@ variable "max_unavailable" {
 variable "instance_types" {
   default = ["t3.medium"]
 }
-
-# variable "openid_client_id" {
-#   type    = list(string)
-#   default = ["sts.amazonaws.com"]
-# }
-
-# variable "aws_load_balancer_controller_role_name" {
-#   type    = string
-#   default = "aws-load-balancer-controller"
-# }
-
-# variable "aws_load_balancer_controller_policy_file_path" {
-#   type    = string
-#   default = "./AWSLoadBalancerController.json"
-# }
