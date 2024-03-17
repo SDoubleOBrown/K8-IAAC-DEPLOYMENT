@@ -15,6 +15,11 @@ variable "vpc_name" {
   default     = "MainVPC" # Replace with the actual default value
 }
 
+variable "bucket_name" {
+  description = "Name of the s3 Bucket"
+  default     = "altschool-terraform-state-backend"
+}
+
 variable "vpc_cidr_block" {
   default = "10.0.0.0/16"
 }
