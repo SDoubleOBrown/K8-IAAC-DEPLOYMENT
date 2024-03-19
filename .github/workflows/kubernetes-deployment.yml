@@ -23,4 +23,5 @@ jobs:
       run: aws eks update-kubeconfig --name eks-cluster --region us-east-1
     - name: Set up monitoring
       run: kubectl apply -f manifests-monitoring/    
-   
+    - name: Set up logging
+      run: kubectl apply -f manifests-logging/ 
