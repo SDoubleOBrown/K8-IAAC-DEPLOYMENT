@@ -36,3 +36,6 @@ jobs:
     
     - name: Set up manifests
       run: kubectl apply -f manifests/ 
+
+    - name: Set up ingress
+      run: kubectl apply -f ingress/  
