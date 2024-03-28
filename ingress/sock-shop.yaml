@@ -5,7 +5,7 @@ metadata:
   namespace: sock-shop
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-1:072995490029:certificate/11ae9532-a803-4852-841e-c5b274cf14c2"
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-1:891377171973:certificate/01ca1ea8-8fb5-4459-84e1-0adff97f2b6c"
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/load-balancer-name: frontend-alb
     alb.ingress.kubernetes.io/group.name: frontend-alb
